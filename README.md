@@ -43,7 +43,8 @@ claude
 │   │   └── test-engineer.md
 │   │
 │   ├── skills/                            ← Reusable workflows
-│   │   ├── rfc-writer/SKILL.md
+│   │   ├── rfcs/SKILL.md                  ← RFC lifecycle (list/new/update/status)
+│   │   ├── commit/SKILL.md                ← Git commit conventions
 │   │   ├── doc-initializer/SKILL.md
 │   │   ├── test-generator/SKILL.md
 │   │   └── architecture-reviewer/SKILL.md
@@ -76,13 +77,15 @@ claude
 3. Commit the docs to your repo
 
 ### Planning a feature
-1. Run `/project:create-rfc` — Claude interviews you and creates an RFC
+1. Run `/project:create-rfc` or `/rfcs new "title"` to create an RFC
 2. Review and set status to `Accepted`
 3. Start a fresh session with `/clear`
 4. Tell Claude to implement the RFC: `Implement docs/rfcs/001-my-feature.md`
 
 ### During development
 - Claude loads rules from `.claude/rules/` automatically based on what files you're editing
+- `/commit` for consistent, conventional commit messages
+- `/rfcs` to manage RFC lifecycle (list, status, update)
 - The `code-reviewer` agent reviews changes before commit
 - The `researcher` agent verifies external APIs/libs against real docs
 - Corrections go into `tasks/lessons.md` so Claude doesn't repeat mistakes

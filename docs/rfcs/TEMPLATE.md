@@ -1,7 +1,11 @@
 # RFC-XXX: [Feature Name]
 
-## Status
-Draft | Accepted | In Progress | Implemented
+| Field      | Value             |
+|------------|-------------------|
+| Status     | Draft             |
+| Author     |                   |
+| Created    | YYYY-MM-DD        |
+| Affects    |                   |
 
 ## Problem Statement
 <!-- What problem does this feature solve? Why is it needed? -->
