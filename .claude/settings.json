@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mvn *)",
+      "Bash(gradle *)",
+      "Bash(./mvnw *)",
+      "Bash(./gradlew *)",
+      "Bash(docker compose *)",
+      "Bash(git *)",
+      "Bash(cat *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(curl *)"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(mvn deploy *)",
+      "Bash(git push --force *)"
+    ]
+  }
+}
