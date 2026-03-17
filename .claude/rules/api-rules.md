@@ -1,3 +1,7 @@
+---
+globs: ["**/api/*Resource.java", "**/api/dto/*.java"]
+---
+
 # API / REST Controller Rules
 
 ## Structure

@@ -1,3 +1,7 @@
+---
+globs: ["**/persistence/*Repository.java", "**/domain/*.java", "**/db/migration/**/*.sql"]
+---
+
 # Database Rules
 
 ## Naming

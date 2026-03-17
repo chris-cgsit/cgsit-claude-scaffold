@@ -38,6 +38,26 @@ src/main/java/com/cgsit/[project]/
 └── security/        ← Authentication, authorization
 ```
 
+### Class Naming Conventions
+
+| Layer | Suffix | Example | File Pattern |
+|-------|--------|---------|--------------|
+| **API** | `*Resource.java` | `PortfolioResource`, `UserResource` | `**/api/*Resource.java` |
+| **API DTOs** | `*Dto.java`, `*Request.java` | `PortfolioDto`, `CreateUserRequest` | `**/api/dto/*.java` |
+| **Service** | `*Service.java` | `PortfolioService`, `AuthService` | `**/service/*Service.java` |
+| **Domain** | Entity name (no suffix) | `Portfolio`, `User`, `Security` | `**/domain/*.java` |
+| **Persistence** | `*Repository.java` | `PortfolioRepository`, `UserRepository` | `**/persistence/*Repository.java` |
+| **Flyway** | `V*__*.sql` | `V1.0.0__initial_schema.sql` | `**/db/migration/**/*.sql` |
+
+### Frontend Naming Conventions
+
+| Type | Pattern | Example |
+|------|---------|---------|
+| **Component** | `kebab-case.component.ts/html/scss` | `portfolio-detail.component.ts` |
+| **Service** | `kebab-case.service.ts` | `portfolio.service.ts` |
+| **Models** | `api.models.ts` | Shared interfaces/types |
+| **E2E Tests** | `*.spec.ts` in `e2e/` | `smoke.spec.ts` |
+
 ## Cloud / Infrastructure
 <!-- AWS, Azure, Docker, Kubernetes — what runs where -->
 [TODO: Define deployment architecture]

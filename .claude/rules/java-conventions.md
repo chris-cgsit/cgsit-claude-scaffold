@@ -1,3 +1,7 @@
+---
+globs: ["**/*.java"]
+---
+
 # Java Conventions
 
 ## General

@@ -1,3 +1,7 @@
+---
+globs: ["**/*Test.java", "**/*Tests.java", "**/e2e/*.spec.ts", "**/test/**/*.java"]
+---
+
 # Testing Rules
 
 ## Structure
@@ -28,3 +32,33 @@
 - Use factory methods or builders for test data (`TestDataFactory.createUser()`)
 - Never rely on external state or shared mutable test data
 - Keep test data minimal — only set fields relevant to the test
+
+## E2E Tests (Playwright) — Phase 1: Smoke Tests
+
+We are in **Phase 1** (App im aktiven Umbau). Rules:
+
+- **Only smoke tests** — test that core flows work, not layout/styling
+- **No CSS class selectors** — never use `.summary-card`, `.state-bar` etc.
+- Use `getByText()`, `getByRole()`, `getByPlaceholder()`, `getByTitle()`, or `data-testid`
+- **No layout assertions** — don't test position, size, or visual appearance
+- Each test max 10-15 lines, testing ONE flow
+- Tests live in `cgsit-finance-web/e2e/smoke.spec.ts`
+- Run: `npm run e2e` from `cgsit-finance-web/`
+
+### What to test (Phase 1)
+- App loads, navigation works (sidebar links reach correct URLs)
+- Portfolio dashboard shows portfolios, can open one
+- Portfolio detail shows KPIs and positions
+- Securities page loads with search
+- Admin pages (users, groups) load
+
+### What NOT to test (Phase 1)
+- Specific CSS classes, DOM structure, or element counts
+- Dark mode styling, responsive layout, animations
+- Exact text formatting (numbers, dates)
+- Complex multi-step workflows (create → edit → delete)
+
+### Later phases
+- **Phase 2** (UI stable): detailed tests with `data-testid` attributes
+- **Phase 3** (production): regression, cross-browser, visual comparison
+- See `docs/testing.md` for full strategy
