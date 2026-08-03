@@ -3,7 +3,7 @@
 > **Anchor:** this doc is the detailed spec behind the short reference in
 > [`CLAUDE.md` → "RFC Planning Discipline"](../CLAUDE.md). The *mechanics* (ask the mandatory
 > fields, check the gate, trigger reviews) are operationalized in the `rfcs` skill +
-> `docs/rfcs/TEMPLATE.md` — this doc explains the *why* and the rules in detail.
+> `.claude/skills/rfcs/TEMPLATE.md` — this doc explains the *why* and the rules in detail.
 > **Read before drafting OR splitting any RFC.**
 
 **Origin (a generic war story).** These rules exist because of a recurring failure mode: a

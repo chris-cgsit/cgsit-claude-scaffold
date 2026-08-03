@@ -18,7 +18,9 @@ lives purely as a file + a row in `docs/rfcs/README.md` — skip every ticket st
 
 ## Reference docs (read these)
 
-- **Template (the one true source):** `docs/rfcs/TEMPLATE.md` — read it before creating an RFC. Do
+- **Template (the one true source):** `.claude/skills/rfcs/TEMPLATE.md` — read it before creating an
+  RFC. It lives *inside the skill* so the skill is self-contained: copy the directory into another
+  repository and the template comes with it. Do
   NOT hand-roll a header or write an empty file.
 - **Planning discipline (the WHY + the rules):** `docs/rfc-planning-discipline.md` — Atomic-Deploy,
   Design-Gate ↔ Closeout loop, Context-Isolation against "completion bleed", Split/Implementation
@@ -61,7 +63,7 @@ design intent later from commit history.
 
 - Directory: `docs/rfcs/`
 - Index: `docs/rfcs/README.md`
-- Template: `docs/rfcs/TEMPLATE.md`
+- Template: `.claude/skills/rfcs/TEMPLATE.md` (ships with the skill, not with the docs)
 - Filename format: `NNN-kebab-case-title.md` (3-digit number, hyphenated title)
 - Numbers are sequential (find highest existing + 1)
 
@@ -89,7 +91,8 @@ the start of a session to find what's pending.
 
 ### `/rfcs new "<title>"`
 Create a new RFC (+ linked ticket if `[TICKET_SYSTEM]`) **via the interactive Intake-Flow below** —
-never write an empty file. It runs the intake, then generates from `docs/rfcs/TEMPLATE.md`, then adds
+never write an empty file. It runs the intake, then generates from `.claude/skills/rfcs/TEMPLATE.md`,
+then adds
 the README row and (optionally) creates the ticket.
 
 ### `/rfcs ticket "<title>"`  *(only if `[TICKET_SYSTEM]`)*
@@ -163,7 +166,8 @@ the design, run a research step in a subagent with a clean context — brief it 
 a solution."* Use `Explore` or a fresh `general-purpose` subagent (not the main session, which already
 carries the ticket framing). The result feeds `## Proposed Solution`. On **Standard**: skip.
 
-**Step 3 — generate:** copy `docs/rfcs/TEMPLATE.md` → `docs/rfcs/NNN-kebab-case-title.md` (next number =
+**Step 3 — generate:** copy `.claude/skills/rfcs/TEMPLATE.md` → `docs/rfcs/NNN-kebab-case-title.md`
+(next number =
 highest + 1), replace `RFC-NNN`, set `Status: Draft`, fill the header fields with the user's choices +
 metadata, fill the Done-Definition and the `Reference Documentation (truth spec)` field, add a row to
 `docs/rfcs/README.md`, then show the finished RFC for approval before committing.
@@ -237,7 +241,8 @@ That makes the phase boundary a *lossless* context cut:
 
 ## Rules
 
-- **New RFCs start from `docs/rfcs/TEMPLATE.md`** (single source — update it in place when conventions
+- **New RFCs start from `.claude/skills/rfcs/TEMPLATE.md`** (single source — update it in place when
+  conventions
   change). Never hand-roll a header.
 - **Every RFC needs a filled `Done-Definition`** before it leaves Draft.
 - **Always update BOTH** the RFC file header AND `docs/rfcs/README.md` when changing status (+ the

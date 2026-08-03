@@ -1,6 +1,8 @@
 # RFC-NNN: <Title>
 
-<!-- Copy this file to NNN-kebab-case-title.md (NNN = highest existing number + 1).
+<!-- This template ships WITH the skill (.claude/skills/rfcs/), not with the docs. The skill is
+     therefore self-contained: copy the directory into another repository and the template follows.
+     Copy this file to docs/rfcs/NNN-kebab-case-title.md (NNN = highest existing number + 1).
      Small Bug-Fix / Cleanup RFCs MAY drop the sections marked *(when needed)* — mandatory are only:
      header, Done-Definition, Summary, Current State, Target State, Proposed Solution, Test Strategy.
      The WHY / rules (Atomic-Deploy, Design-Gate, Context-Isolation, Split-Discipline):

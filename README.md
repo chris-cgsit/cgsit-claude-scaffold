@@ -44,6 +44,7 @@ claude
 │   │
 │   ├── skills/                            ← Reusable workflows
 │   │   ├── rfcs/SKILL.md                  ← RFC lifecycle (list/new/update/status)
+│   │   ├── rfcs/TEMPLATE.md               ← the RFC template — ships WITH the skill
 │   │   ├── commit/SKILL.md                ← Git commit conventions
 │   │   ├── doc-initializer/SKILL.md
 │   │   ├── test-generator/SKILL.md
@@ -62,8 +63,7 @@ claude
 │   ├── testing.md                         ← Test strategy, frameworks, conventions
 │   ├── development_guide.md               ← Local setup, build, run, deploy
 │   └── rfcs/
-│       ├── TEMPLATE.md                    ← RFC template for consistent feature specs
-│       └── 001-example-feature.md         ← Example RFC
+│       └── 001-example-user-auth.md       ← Example RFC (the template lives with the skill)
 │
 └── tasks/
     └── lessons.md                         ← Corrections from previous sessions
